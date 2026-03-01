@@ -100,7 +100,7 @@ export default function RootLayout({
               priceRange: "₹₹",
               url: "https://www.indudentalclinic.com",
               sameAs: [
-                "https://www.facebook.com/indudental",
+                "https://www.facebook.com/dentalclinic.siwan",
                 "https://www.instagram.com/indudental",
               ],
             }),
