@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
@@ -8,6 +8,7 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.indudentalclinic.com"),
   title: "Indu Dental Clinic | Best Dentist in Siwan Bihar | Dental Care Near Naya Bazar",
   description:
     "Indu Dental Clinic in Siwan, Bihar offers root canal, teeth cleaning, tooth extraction and complete dental care. Book appointment via WhatsApp today.",
@@ -64,6 +65,9 @@ export const metadata: Metadata = {
     apple: "/favicon.svg",
     shortcut: "/favicon.svg",
   },
+};
+
+export const viewport: Viewport = {
   themeColor: "#0056B3",
 };
 
