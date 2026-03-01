@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   // TODO: Paste your Google Search Console verification code below. It will inject a <meta name="google-site-verification" content="..." /> tag into your head.
   // Example: google: "aBcD_eFgHiJkLmnOpQr-123456",
   verification: {
-    google: "w_SGE2aCH_W7fh0SceoSYQ3RvrGQ1b5GTSRU788yLHk",
+    google: "gSMDaVDeypKTd5KAYtKwhATg45sSfZVqTzxNaziHStI",
   },
   icons: {
     icon: "/favicon.svg",
