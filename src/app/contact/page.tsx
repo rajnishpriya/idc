@@ -40,7 +40,7 @@ export default function Contact() {
 
                             {[
                                 { Icon: Phone, label: "Phone", value: "+91 99318 62472", href: "tel:+919931862472" },
-                                { Icon: Mail, label: "Email", value: "concierge@indudentalclinic.com", href: "mailto:concierge@indudentalclinic.com" },
+                                { Icon: Mail, label: "Email", value: "dentalclinicinsiwan@gmail.com", href: "mailto:dentalclinicinsiwan@gmail.com" },
                             ].map(({ Icon, label, value, href }) => (
                                 <a key={label} href={href} className="flex items-start gap-4 group hover:no-underline">
                                     <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl sm:rounded-2xl bg-[#20B2AA]/10 text-[#20B2AA] shrink-0 group-hover:bg-[#20B2AA] group-hover:text-white transition-all duration-300">

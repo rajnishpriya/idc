@@ -70,7 +70,7 @@ export default function Footer() {
                             </div>
                             <div className="flex items-center gap-4">
                                 <Mail size={20} className="text-[#20B2AA] shrink-0" />
-                                <span>concierge@indudentalclinic.com</span>
+                                <span>dentalclinicinsiwan@gmail.com</span>
                             </div>
                         </div>
                     </div>
