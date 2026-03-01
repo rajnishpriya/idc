@@ -2,6 +2,27 @@ import Link from "next/link";
 import { ArrowRight, Image as ImageIcon } from "lucide-react";
 import AnimatedHeading from "@/components/AnimatedHeading";
 import FadeIn from "@/components/FadeIn";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Clinic Gallery | Indu Dental Clinic Siwan",
+    description:
+        "Take a tour of Indu Dental Clinic in Siwan, Bihar. See our modern, clean, and advanced dental care facility.",
+    openGraph: {
+        title: "Gallery | Indu Dental Clinic",
+        description:
+            "View photos of our state-of-the-art dental clinic in Siwan.",
+        type: "website",
+        images: [
+            {
+                url: "/images/gallery2.jpeg",
+                width: 1200,
+                height: 630,
+                alt: "Indu Dental Clinic Interior Gallery",
+            },
+        ],
+    },
+};
 
 export default function Gallery() {
     const images = [

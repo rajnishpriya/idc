@@ -25,6 +25,14 @@ export const metadata: Metadata = {
         description:
             "Indu Dental Clinic Siwan — trusted by 5000+ patients. Expert dental care with modern technology. Book your appointment today.",
         type: "website",
+        images: [
+            {
+                url: "/images/dentist-siwan.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Dr. Rajnish Priyadarshi - Best Dentist in Siwan",
+            },
+        ],
     },
 };
 

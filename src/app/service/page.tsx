@@ -1,7 +1,28 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, ChevronDown } from "lucide-react";
+import type { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
 import AnimatedHeading from "@/components/AnimatedHeading";
+
+export const metadata: Metadata = {
+    title: "Dental Services | Indu Dental Clinic Siwan Bihar",
+    description:
+        "Comprehensive dental services in Siwan, Bihar. Our treatments include Root Canal, Implants, Braces, Teeth Whitening & Extractions.",
+    openGraph: {
+        title: "Dental Services | Indu Dental Clinic",
+        description:
+            "From routine cleanings to advanced implants, see all the dental services Indu Dental Clinic offers in Siwan.",
+        type: "website",
+        images: [
+            {
+                url: "/images/General Dentistry.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Dental Services at Indu Dental Clinic Siwan",
+            },
+        ],
+    },
+};
 
 export default function Services() {
     return (
@@ -31,256 +52,256 @@ export default function Services() {
                         {/* Service 1: General Dentistry */}
                         <div id="general" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 scroll-mt-32">
                             <FadeIn direction="up">
-                            <div className="flex flex-col items-center gap-8 sm:gap-10 lg:flex-row lg:gap-24">
-                                <div className="w-full lg:w-1/2">
-                                    <div className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-gray-100 shadow-2xl relative group">
-                                        <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'url("/images/General Dentistry.jpg")' }} aria-label="General dentistry checkup"></div>
-                                        <div className="absolute inset-0 bg-[#0056B3]/10 mix-blend-overlay"></div>
+                                <div className="flex flex-col items-center gap-8 sm:gap-10 lg:flex-row lg:gap-24">
+                                    <div className="w-full lg:w-1/2">
+                                        <div className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-gray-100 shadow-2xl relative group">
+                                            <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'url("/images/General Dentistry.jpg")' }} aria-label="General dentistry checkup"></div>
+                                            <div className="absolute inset-0 bg-[#0056B3]/10 mix-blend-overlay"></div>
+                                        </div>
+                                    </div>
+                                    <div className="w-full lg:w-1/2 flex flex-col justify-center">
+                                        <div className="inline-flex items-center gap-2 mb-4"><span className="w-8 h-1 bg-[#20B2AA] rounded-full"></span><span className="text-[#20B2AA] font-bold uppercase tracking-wider text-sm">Foundation</span></div>
+                                        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-[#333333] mb-4 sm:mb-6">General Dentistry</h2>
+                                        <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 lg:mb-10">Maintaining optimal oral health is our primary goal. Our general dentistry services focus on prevention, early detection, and restoration to keep your smile healthy for a lifetime.</p>
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
+                                            {["Routine Checkups", "Teeth Cleaning", "Cavity Fillings", "Emergency Care"].map(item => (
+                                                <li key={item} className="flex items-start gap-4"><CheckCircle2 className="text-[#20B2AA] fill-[#20B2AA]/10 w-6 h-6 shrink-0 mt-0.5" /><span className="font-semibold text-gray-800 text-base sm:text-lg">{item}</span></li>
+                                            ))}
+                                        </ul>
+                                        <div className="mt-8">
+                                            <Link
+                                                href={`/book?service=${encodeURIComponent("General Dentistry")}`}
+                                                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 bg-[#0056B3] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#0056B3]/20 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+                                            >
+                                                Book Appointment <ArrowRight size={18} />
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                                    <div className="inline-flex items-center gap-2 mb-4"><span className="w-8 h-1 bg-[#20B2AA] rounded-full"></span><span className="text-[#20B2AA] font-bold uppercase tracking-wider text-sm">Foundation</span></div>
-                                    <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-[#333333] mb-4 sm:mb-6">General Dentistry</h2>
-                                    <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 lg:mb-10">Maintaining optimal oral health is our primary goal. Our general dentistry services focus on prevention, early detection, and restoration to keep your smile healthy for a lifetime.</p>
-                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
-                                        {["Routine Checkups", "Teeth Cleaning", "Cavity Fillings", "Emergency Care"].map(item => (
-                                            <li key={item} className="flex items-start gap-4"><CheckCircle2 className="text-[#20B2AA] fill-[#20B2AA]/10 w-6 h-6 shrink-0 mt-0.5" /><span className="font-semibold text-gray-800 text-base sm:text-lg">{item}</span></li>
-                                        ))}
-                                    </ul>
-                                    <div className="mt-8">
-                                        <Link
-                                            href={`/book?service=${encodeURIComponent("General Dentistry")}`}
-                                            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 bg-[#0056B3] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#0056B3]/20 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
-                                        >
-                                            Book Appointment <ArrowRight size={18} />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
                             </FadeIn>
                         </div>
 
                         {/* Service 2: Cosmetic Dentistry (Reversed) */}
                         <div id="cosmetic" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 scroll-mt-32">
                             <FadeIn direction="up">
-                            <div className="flex flex-col items-center gap-8 sm:gap-10 lg:flex-row-reverse lg:gap-24">
-                                <div className="w-full lg:w-1/2">
-                                    <div className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-gray-100 shadow-2xl relative group">
-                                        <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'url("/images/Cosmetic Dentistry.jpg")' }} aria-label="Cosmetic dentistry smile makeover"></div>
-                                        <div className="absolute inset-0 bg-[#0056B3]/10 mix-blend-overlay"></div>
+                                <div className="flex flex-col items-center gap-8 sm:gap-10 lg:flex-row-reverse lg:gap-24">
+                                    <div className="w-full lg:w-1/2">
+                                        <div className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-gray-100 shadow-2xl relative group">
+                                            <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'url("/images/Cosmetic Dentistry.jpg")' }} aria-label="Cosmetic dentistry smile makeover"></div>
+                                            <div className="absolute inset-0 bg-[#0056B3]/10 mix-blend-overlay"></div>
+                                        </div>
+                                    </div>
+                                    <div className="w-full lg:w-1/2 flex flex-col justify-center">
+                                        <div className="inline-flex items-center gap-2 mb-4"><span className="w-8 h-1 bg-[#20B2AA] rounded-full"></span><span className="text-[#20B2AA] font-bold uppercase tracking-wider text-sm">Aesthetics</span></div>
+                                        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-[#333333] mb-4 sm:mb-6">Cosmetic Dentistry</h2>
+                                        <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 lg:mb-10">Transform your smile with our advanced aesthetic treatments. We combine artistry with medical precision to give you the confident smile you've always dreamed of.</p>
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
+                                            {["Teeth Whitening", "Porcelain Veneers", "Smile Makeovers", "Composite Bonding"].map(item => (
+                                                <li key={item} className="flex items-start gap-4"><CheckCircle2 className="text-[#20B2AA] fill-[#20B2AA]/10 w-6 h-6 shrink-0 mt-0.5" /><span className="font-semibold text-gray-800 text-base sm:text-lg">{item}</span></li>
+                                            ))}
+                                        </ul>
+                                        <div className="mt-8">
+                                            <Link
+                                                href={`/book?service=${encodeURIComponent("Cosmetic Dentistry")}`}
+                                                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 bg-[#0056B3] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#0056B3]/20 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+                                            >
+                                                Book Appointment <ArrowRight size={18} />
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                                    <div className="inline-flex items-center gap-2 mb-4"><span className="w-8 h-1 bg-[#20B2AA] rounded-full"></span><span className="text-[#20B2AA] font-bold uppercase tracking-wider text-sm">Aesthetics</span></div>
-                                    <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-[#333333] mb-4 sm:mb-6">Cosmetic Dentistry</h2>
-                                    <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 lg:mb-10">Transform your smile with our advanced aesthetic treatments. We combine artistry with medical precision to give you the confident smile you've always dreamed of.</p>
-                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
-                                        {["Teeth Whitening", "Porcelain Veneers", "Smile Makeovers", "Composite Bonding"].map(item => (
-                                            <li key={item} className="flex items-start gap-4"><CheckCircle2 className="text-[#20B2AA] fill-[#20B2AA]/10 w-6 h-6 shrink-0 mt-0.5" /><span className="font-semibold text-gray-800 text-base sm:text-lg">{item}</span></li>
-                                        ))}
-                                    </ul>
-                                    <div className="mt-8">
-                                        <Link
-                                            href={`/book?service=${encodeURIComponent("Cosmetic Dentistry")}`}
-                                            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 bg-[#0056B3] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#0056B3]/20 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
-                                        >
-                                            Book Appointment <ArrowRight size={18} />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
                             </FadeIn>
                         </div>
 
                         {/* Service 3: Orthodontics */}
                         <div id="orthodontics" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 scroll-mt-32">
                             <FadeIn direction="up">
-                            <div className="flex flex-col items-center gap-8 sm:gap-10 lg:flex-row lg:gap-24">
-                                <div className="w-full lg:w-1/2">
-                                    <div className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-gray-100 shadow-2xl relative group">
-                                        <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'url("/images/Braces & Orthodontics.jpg")' }} aria-label="Braces and orthodontic treatment"></div>
-                                        <div className="absolute inset-0 bg-[#0056B3]/10 mix-blend-overlay"></div>
+                                <div className="flex flex-col items-center gap-8 sm:gap-10 lg:flex-row lg:gap-24">
+                                    <div className="w-full lg:w-1/2">
+                                        <div className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-gray-100 shadow-2xl relative group">
+                                            <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'url("/images/Braces & Orthodontics.jpg")' }} aria-label="Braces and orthodontic treatment"></div>
+                                            <div className="absolute inset-0 bg-[#0056B3]/10 mix-blend-overlay"></div>
+                                        </div>
+                                    </div>
+                                    <div className="w-full lg:w-1/2 flex flex-col justify-center">
+                                        <div className="inline-flex items-center gap-2 mb-4"><span className="w-8 h-1 bg-[#20B2AA] rounded-full"></span><span className="text-[#20B2AA] font-bold uppercase tracking-wider text-sm">Alignment</span></div>
+                                        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-[#333333] mb-4 sm:mb-6">Braces & Orthodontics</h2>
+                                        <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 lg:mb-10">Professional teeth straightening for all ages. We use modern techniques and comfortable appliances to correct alignment and bite issues effectively.</p>
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
+                                            {["Invisalign®", "Ceramic Braces", "Traditional Braces", "Adult Ortho"].map(item => (
+                                                <li key={item} className="flex items-start gap-4"><CheckCircle2 className="text-[#20B2AA] fill-[#20B2AA]/10 w-6 h-6 shrink-0 mt-0.5" /><span className="font-semibold text-gray-800 text-base sm:text-lg">{item}</span></li>
+                                            ))}
+                                        </ul>
+                                        <div className="mt-8">
+                                            <Link
+                                                href={`/book?service=${encodeURIComponent("Braces & Orthodontics")}`}
+                                                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 bg-[#0056B3] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#0056B3]/20 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+                                            >
+                                                Book Appointment <ArrowRight size={18} />
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                                    <div className="inline-flex items-center gap-2 mb-4"><span className="w-8 h-1 bg-[#20B2AA] rounded-full"></span><span className="text-[#20B2AA] font-bold uppercase tracking-wider text-sm">Alignment</span></div>
-                                    <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-[#333333] mb-4 sm:mb-6">Braces & Orthodontics</h2>
-                                    <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 lg:mb-10">Professional teeth straightening for all ages. We use modern techniques and comfortable appliances to correct alignment and bite issues effectively.</p>
-                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
-                                        {["Invisalign®", "Ceramic Braces", "Traditional Braces", "Adult Ortho"].map(item => (
-                                            <li key={item} className="flex items-start gap-4"><CheckCircle2 className="text-[#20B2AA] fill-[#20B2AA]/10 w-6 h-6 shrink-0 mt-0.5" /><span className="font-semibold text-gray-800 text-base sm:text-lg">{item}</span></li>
-                                        ))}
-                                    </ul>
-                                    <div className="mt-8">
-                                        <Link
-                                            href={`/book?service=${encodeURIComponent("Braces & Orthodontics")}`}
-                                            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 bg-[#0056B3] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#0056B3]/20 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
-                                        >
-                                            Book Appointment <ArrowRight size={18} />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
                             </FadeIn>
                         </div>
 
                         {/* Service 4: Dental Implants (Reversed) */}
                         <div id="implants" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 scroll-mt-32">
                             <FadeIn direction="up">
-                            <div className="flex flex-col items-center gap-8 sm:gap-10 lg:flex-row-reverse lg:gap-24">
-                                <div className="w-full lg:w-1/2">
-                                    <div className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-gray-100 shadow-2xl relative group">
-                                        <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'url("/images/Dental Implants.jpg")' }} aria-label="Dental implant procedure"></div>
-                                        <div className="absolute inset-0 bg-[#0056B3]/10 mix-blend-overlay"></div>
+                                <div className="flex flex-col items-center gap-8 sm:gap-10 lg:flex-row-reverse lg:gap-24">
+                                    <div className="w-full lg:w-1/2">
+                                        <div className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-gray-100 shadow-2xl relative group">
+                                            <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'url("/images/Dental Implants.jpg")' }} aria-label="Dental implant procedure"></div>
+                                            <div className="absolute inset-0 bg-[#0056B3]/10 mix-blend-overlay"></div>
+                                        </div>
+                                    </div>
+                                    <div className="w-full lg:w-1/2 flex flex-col justify-center">
+                                        <div className="inline-flex items-center gap-2 mb-4"><span className="w-8 h-1 bg-[#20B2AA] rounded-full"></span><span className="text-[#20B2AA] font-bold uppercase tracking-wider text-sm">Restoration</span></div>
+                                        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-[#333333] mb-4 sm:mb-6">Dental Implants</h2>
+                                        <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 lg:mb-10">Permanent, natural-looking solutions for missing teeth. Our implant specialists use state-of-the-art technology to restore your smile's function and aesthetics.</p>
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
+                                            {["Single Implants", "Implant Bridges", "All-on-4® System", "Bone Grafting"].map(item => (
+                                                <li key={item} className="flex items-start gap-4"><CheckCircle2 className="text-[#20B2AA] fill-[#20B2AA]/10 w-6 h-6 shrink-0 mt-0.5" /><span className="font-semibold text-gray-800 text-base sm:text-lg">{item}</span></li>
+                                            ))}
+                                        </ul>
+                                        <div className="mt-8">
+                                            <Link
+                                                href={`/book?service=${encodeURIComponent("Dental Implants")}`}
+                                                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 bg-[#0056B3] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#0056B3]/20 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+                                            >
+                                                Book Appointment <ArrowRight size={18} />
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                                    <div className="inline-flex items-center gap-2 mb-4"><span className="w-8 h-1 bg-[#20B2AA] rounded-full"></span><span className="text-[#20B2AA] font-bold uppercase tracking-wider text-sm">Restoration</span></div>
-                                    <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-[#333333] mb-4 sm:mb-6">Dental Implants</h2>
-                                    <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 lg:mb-10">Permanent, natural-looking solutions for missing teeth. Our implant specialists use state-of-the-art technology to restore your smile's function and aesthetics.</p>
-                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
-                                        {["Single Implants", "Implant Bridges", "All-on-4® System", "Bone Grafting"].map(item => (
-                                            <li key={item} className="flex items-start gap-4"><CheckCircle2 className="text-[#20B2AA] fill-[#20B2AA]/10 w-6 h-6 shrink-0 mt-0.5" /><span className="font-semibold text-gray-800 text-base sm:text-lg">{item}</span></li>
-                                        ))}
-                                    </ul>
-                                    <div className="mt-8">
-                                        <Link
-                                            href={`/book?service=${encodeURIComponent("Dental Implants")}`}
-                                            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 bg-[#0056B3] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#0056B3]/20 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
-                                        >
-                                            Book Appointment <ArrowRight size={18} />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
                             </FadeIn>
                         </div>
 
                         {/* Service 5: Root Canal Treatment */}
                         <div id="rootcanal" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 scroll-mt-32">
                             <FadeIn direction="up">
-                            <div className="flex flex-col items-center gap-8 sm:gap-10 lg:flex-row lg:gap-24">
-                                <div className="w-full lg:w-1/2">
-                                    <div className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-gray-100 shadow-2xl relative group">
-                                        <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'url("/images/root-canal-treatment-siwan.jpeg")' }} aria-label="Root canal treatment procedure"></div>
-                                        <div className="absolute inset-0 bg-[#0056B3]/10 mix-blend-overlay"></div>
+                                <div className="flex flex-col items-center gap-8 sm:gap-10 lg:flex-row lg:gap-24">
+                                    <div className="w-full lg:w-1/2">
+                                        <div className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-gray-100 shadow-2xl relative group">
+                                            <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'url("/images/root-canal-treatment-siwan.jpeg")' }} aria-label="Root canal treatment procedure"></div>
+                                            <div className="absolute inset-0 bg-[#0056B3]/10 mix-blend-overlay"></div>
+                                        </div>
+                                    </div>
+                                    <div className="w-full lg:w-1/2 flex flex-col justify-center">
+                                        <div className="inline-flex items-center gap-2 mb-4"><span className="w-8 h-1 bg-[#20B2AA] rounded-full"></span><span className="text-[#20B2AA] font-bold uppercase tracking-wider text-sm">Endodontics</span></div>
+                                        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-[#333333] mb-4 sm:mb-6">Root Canal Treatment</h2>
+                                        <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 lg:mb-10">Painless RCT to save infected or damaged teeth. We use modern rotary endodontic systems and effective anaesthesia so you feel no discomfort during the procedure.</p>
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
+                                            {["Painless RCT", "Rotary Endodontics", "Single-Visit RCT", "Post & Core Build-up"].map(item => (
+                                                <li key={item} className="flex items-start gap-4"><CheckCircle2 className="text-[#20B2AA] fill-[#20B2AA]/10 w-6 h-6 shrink-0 mt-0.5" /><span className="font-semibold text-gray-800 text-base sm:text-lg">{item}</span></li>
+                                            ))}
+                                        </ul>
+                                        <div className="mt-8">
+                                            <Link
+                                                href={`/book?service=${encodeURIComponent("Root Canal Treatment")}`}
+                                                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 bg-[#0056B3] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#0056B3]/20 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+                                            >
+                                                Book Appointment <ArrowRight size={18} />
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                                    <div className="inline-flex items-center gap-2 mb-4"><span className="w-8 h-1 bg-[#20B2AA] rounded-full"></span><span className="text-[#20B2AA] font-bold uppercase tracking-wider text-sm">Endodontics</span></div>
-                                    <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-[#333333] mb-4 sm:mb-6">Root Canal Treatment</h2>
-                                    <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 lg:mb-10">Painless RCT to save infected or damaged teeth. We use modern rotary endodontic systems and effective anaesthesia so you feel no discomfort during the procedure.</p>
-                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
-                                        {["Painless RCT", "Rotary Endodontics", "Single-Visit RCT", "Post & Core Build-up"].map(item => (
-                                            <li key={item} className="flex items-start gap-4"><CheckCircle2 className="text-[#20B2AA] fill-[#20B2AA]/10 w-6 h-6 shrink-0 mt-0.5" /><span className="font-semibold text-gray-800 text-base sm:text-lg">{item}</span></li>
-                                        ))}
-                                    </ul>
-                                    <div className="mt-8">
-                                        <Link
-                                            href={`/book?service=${encodeURIComponent("Root Canal Treatment")}`}
-                                            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 bg-[#0056B3] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#0056B3]/20 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
-                                        >
-                                            Book Appointment <ArrowRight size={18} />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
                             </FadeIn>
                         </div>
 
                         {/* Service 6: Tooth Extraction (Reversed) */}
                         <div id="extraction" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 scroll-mt-32">
                             <FadeIn direction="up">
-                            <div className="flex flex-col items-center gap-8 sm:gap-10 lg:flex-row-reverse lg:gap-24">
-                                <div className="w-full lg:w-1/2">
-                                    <div className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-gray-100 shadow-2xl relative group">
-                                        <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'url("/images/Tooth Extraction.jpg")' }} aria-label="Safe tooth extraction procedure"></div>
-                                        <div className="absolute inset-0 bg-[#0056B3]/10 mix-blend-overlay"></div>
+                                <div className="flex flex-col items-center gap-8 sm:gap-10 lg:flex-row-reverse lg:gap-24">
+                                    <div className="w-full lg:w-1/2">
+                                        <div className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-gray-100 shadow-2xl relative group">
+                                            <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'url("/images/Tooth Extraction.jpg")' }} aria-label="Safe tooth extraction procedure"></div>
+                                            <div className="absolute inset-0 bg-[#0056B3]/10 mix-blend-overlay"></div>
+                                        </div>
+                                    </div>
+                                    <div className="w-full lg:w-1/2 flex flex-col justify-center">
+                                        <div className="inline-flex items-center gap-2 mb-4"><span className="w-8 h-1 bg-[#20B2AA] rounded-full"></span><span className="text-[#20B2AA] font-bold uppercase tracking-wider text-sm">Oral Surgery</span></div>
+                                        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-[#333333] mb-4 sm:mb-6">Tooth Extraction</h2>
+                                        <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 lg:mb-10">Safe and painless removal of damaged, decayed, or impacted teeth. Our experienced team ensures a comfortable experience with minimal recovery time.</p>
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
+                                            {["Simple Extractions", "Wisdom Tooth Removal", "Surgical Extractions", "Post-Op Care"].map(item => (
+                                                <li key={item} className="flex items-start gap-4"><CheckCircle2 className="text-[#20B2AA] fill-[#20B2AA]/10 w-6 h-6 shrink-0 mt-0.5" /><span className="font-semibold text-gray-800 text-base sm:text-lg">{item}</span></li>
+                                            ))}
+                                        </ul>
+                                        <div className="mt-8">
+                                            <Link
+                                                href={`/book?service=${encodeURIComponent("Tooth Extraction")}`}
+                                                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 bg-[#0056B3] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#0056B3]/20 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+                                            >
+                                                Book Appointment <ArrowRight size={18} />
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                                    <div className="inline-flex items-center gap-2 mb-4"><span className="w-8 h-1 bg-[#20B2AA] rounded-full"></span><span className="text-[#20B2AA] font-bold uppercase tracking-wider text-sm">Oral Surgery</span></div>
-                                    <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-[#333333] mb-4 sm:mb-6">Tooth Extraction</h2>
-                                    <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 lg:mb-10">Safe and painless removal of damaged, decayed, or impacted teeth. Our experienced team ensures a comfortable experience with minimal recovery time.</p>
-                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
-                                        {["Simple Extractions", "Wisdom Tooth Removal", "Surgical Extractions", "Post-Op Care"].map(item => (
-                                            <li key={item} className="flex items-start gap-4"><CheckCircle2 className="text-[#20B2AA] fill-[#20B2AA]/10 w-6 h-6 shrink-0 mt-0.5" /><span className="font-semibold text-gray-800 text-base sm:text-lg">{item}</span></li>
-                                        ))}
-                                    </ul>
-                                    <div className="mt-8">
-                                        <Link
-                                            href={`/book?service=${encodeURIComponent("Tooth Extraction")}`}
-                                            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 bg-[#0056B3] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#0056B3]/20 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
-                                        >
-                                            Book Appointment <ArrowRight size={18} />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
                             </FadeIn>
                         </div>
 
                         {/* Service 7: Gum Treatment */}
                         <div id="gums" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 scroll-mt-32">
                             <FadeIn direction="up">
-                            <div className="flex flex-col items-center gap-8 sm:gap-10 lg:flex-row lg:gap-24">
-                                <div className="w-full lg:w-1/2">
-                                    <div className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-gray-100 shadow-2xl relative group">
-                                        <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'url("/images/Gum Treatment.jpg")' }} aria-label="Gum disease periodontal treatment"></div>
-                                        <div className="absolute inset-0 bg-[#0056B3]/10 mix-blend-overlay"></div>
+                                <div className="flex flex-col items-center gap-8 sm:gap-10 lg:flex-row lg:gap-24">
+                                    <div className="w-full lg:w-1/2">
+                                        <div className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-gray-100 shadow-2xl relative group">
+                                            <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'url("/images/Gum Treatment.jpg")' }} aria-label="Gum disease periodontal treatment"></div>
+                                            <div className="absolute inset-0 bg-[#0056B3]/10 mix-blend-overlay"></div>
+                                        </div>
+                                    </div>
+                                    <div className="w-full lg:w-1/2 flex flex-col justify-center">
+                                        <div className="inline-flex items-center gap-2 mb-4"><span className="w-8 h-1 bg-[#20B2AA] rounded-full"></span><span className="text-[#20B2AA] font-bold uppercase tracking-wider text-sm">Periodontics</span></div>
+                                        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-[#333333] mb-4 sm:mb-6">Gum Treatment</h2>
+                                        <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 lg:mb-10">Expert diagnosis and treatment of gum disease (pyorrhoea). Healthy gums are the foundation of a healthy smile — we provide comprehensive periodontal care for lasting results.</p>
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
+                                            {["Deep Cleaning (Scaling)", "Flap Surgery", "Gum Grafting", "Pocket Reduction"].map(item => (
+                                                <li key={item} className="flex items-start gap-4"><CheckCircle2 className="text-[#20B2AA] fill-[#20B2AA]/10 w-6 h-6 shrink-0 mt-0.5" /><span className="font-semibold text-gray-800 text-base sm:text-lg">{item}</span></li>
+                                            ))}
+                                        </ul>
+                                        <div className="mt-8">
+                                            <Link
+                                                href={`/book?service=${encodeURIComponent("Gum Treatment")}`}
+                                                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 bg-[#0056B3] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#0056B3]/20 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+                                            >
+                                                Book Appointment <ArrowRight size={18} />
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                                    <div className="inline-flex items-center gap-2 mb-4"><span className="w-8 h-1 bg-[#20B2AA] rounded-full"></span><span className="text-[#20B2AA] font-bold uppercase tracking-wider text-sm">Periodontics</span></div>
-                                    <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-[#333333] mb-4 sm:mb-6">Gum Treatment</h2>
-                                    <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 lg:mb-10">Expert diagnosis and treatment of gum disease (pyorrhoea). Healthy gums are the foundation of a healthy smile — we provide comprehensive periodontal care for lasting results.</p>
-                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
-                                        {["Deep Cleaning (Scaling)", "Flap Surgery", "Gum Grafting", "Pocket Reduction"].map(item => (
-                                            <li key={item} className="flex items-start gap-4"><CheckCircle2 className="text-[#20B2AA] fill-[#20B2AA]/10 w-6 h-6 shrink-0 mt-0.5" /><span className="font-semibold text-gray-800 text-base sm:text-lg">{item}</span></li>
-                                        ))}
-                                    </ul>
-                                    <div className="mt-8">
-                                        <Link
-                                            href={`/book?service=${encodeURIComponent("Gum Treatment")}`}
-                                            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 bg-[#0056B3] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#0056B3]/20 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
-                                        >
-                                            Book Appointment <ArrowRight size={18} />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
                             </FadeIn>
                         </div>
 
                         {/* Service 8: Kids Dentistry (Reversed) */}
                         <div id="kids" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12 scroll-mt-32">
                             <FadeIn direction="up">
-                            <div className="flex flex-col items-center gap-8 sm:gap-10 lg:flex-row-reverse lg:gap-24">
-                                <div className="w-full lg:w-1/2">
-                                    <div className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-gray-100 shadow-2xl relative group">
-                                        <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'url("/images/Kids Dentistry.jpg")' }} aria-label="Kids paediatric dentistry friendly care"></div>
-                                        <div className="absolute inset-0 bg-[#0056B3]/10 mix-blend-overlay"></div>
+                                <div className="flex flex-col items-center gap-8 sm:gap-10 lg:flex-row-reverse lg:gap-24">
+                                    <div className="w-full lg:w-1/2">
+                                        <div className="aspect-[4/3] overflow-hidden rounded-[2rem] bg-gray-100 shadow-2xl relative group">
+                                            <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: 'url("/images/Kids Dentistry.jpg")' }} aria-label="Kids paediatric dentistry friendly care"></div>
+                                            <div className="absolute inset-0 bg-[#0056B3]/10 mix-blend-overlay"></div>
+                                        </div>
+                                    </div>
+                                    <div className="w-full lg:w-1/2 flex flex-col justify-center">
+                                        <div className="inline-flex items-center gap-2 mb-4"><span className="w-8 h-1 bg-[#20B2AA] rounded-full"></span><span className="text-[#20B2AA] font-bold uppercase tracking-wider text-sm">Paediatric</span></div>
+                                        <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-[#333333] mb-4 sm:mb-6">Kids Dentistry</h2>
+                                        <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 lg:mb-10">Gentle, friendly dental care designed specially for children. We create a comfortable, fun environment so your child develops a positive relationship with dental visits from an early age.</p>
+                                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
+                                            {["Fluoride Treatment", "Dental Sealants", "Milk Tooth Filling", "Habit Correction"].map(item => (
+                                                <li key={item} className="flex items-start gap-4"><CheckCircle2 className="text-[#20B2AA] fill-[#20B2AA]/10 w-6 h-6 shrink-0 mt-0.5" /><span className="font-semibold text-gray-800 text-base sm:text-lg">{item}</span></li>
+                                            ))}
+                                        </ul>
+                                        <div className="mt-8">
+                                            <Link
+                                                href={`/book?service=${encodeURIComponent("Kids Dentistry")}`}
+                                                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 bg-[#0056B3] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#0056B3]/20 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
+                                            >
+                                                Book Appointment <ArrowRight size={18} />
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                                    <div className="inline-flex items-center gap-2 mb-4"><span className="w-8 h-1 bg-[#20B2AA] rounded-full"></span><span className="text-[#20B2AA] font-bold uppercase tracking-wider text-sm">Paediatric</span></div>
-                                    <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-[#333333] mb-4 sm:mb-6">Kids Dentistry</h2>
-                                    <p className="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8 lg:mb-10">Gentle, friendly dental care designed specially for children. We create a comfortable, fun environment so your child develops a positive relationship with dental visits from an early age.</p>
-                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
-                                        {["Fluoride Treatment", "Dental Sealants", "Milk Tooth Filling", "Habit Correction"].map(item => (
-                                            <li key={item} className="flex items-start gap-4"><CheckCircle2 className="text-[#20B2AA] fill-[#20B2AA]/10 w-6 h-6 shrink-0 mt-0.5" /><span className="font-semibold text-gray-800 text-base sm:text-lg">{item}</span></li>
-                                        ))}
-                                    </ul>
-                                    <div className="mt-8">
-                                        <Link
-                                            href={`/book?service=${encodeURIComponent("Kids Dentistry")}`}
-                                            className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 bg-[#0056B3] text-white text-sm sm:text-base font-bold shadow-lg shadow-[#0056B3]/20 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
-                                        >
-                                            Book Appointment <ArrowRight size={18} />
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
                             </FadeIn>
                         </div>
 

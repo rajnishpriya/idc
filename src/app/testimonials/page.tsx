@@ -1,5 +1,26 @@
 import Link from "next/link";
 import { Star, Quote, ArrowRight } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Patient Reviews | Indu Dental Clinic Siwan",
+    description:
+        "Read what our patients have to say about their experience at Indu Dental Clinic in Siwan, Bihar. 5-star rated dental care.",
+    openGraph: {
+        title: "Patient Testimonials | Indu Dental Clinic",
+        description:
+            "See why 5000+ patients trust Indu Dental Clinic for their smiles in Siwan.",
+        type: "website",
+        images: [
+            {
+                url: "/images/hero.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Patient Reviews for Indu Dental Clinic Siwan",
+            },
+        ],
+    },
+};
 
 export default function Testimonials() {
     const testimonials = [

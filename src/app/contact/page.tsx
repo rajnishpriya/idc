@@ -8,6 +8,20 @@ export const metadata: Metadata = {
     title: "Contact Best Dentist in Siwan | Indu Dental Clinic location",
     description:
         "Contact Indu Dental Clinic in Siwan, Bihar. Get directions to our clinic near Sadar Hospital, Naya Bazar. Call us to book your dental appointment today.",
+    openGraph: {
+        title: "Contact Indu Dental Clinic | Siwan Bihar",
+        description:
+            "Get in touch with us for the best dental care in Siwan. Find our address, phone number, and location on the map.",
+        type: "website",
+        images: [
+            {
+                url: "/images/clinic-exterior.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Contact Indu Dental Clinic Siwan",
+            },
+        ],
+    },
 };
 
 export default function Contact() {
