@@ -66,7 +66,7 @@ export default function About() {
                                 About <AnimatedHeading sequence={["Indu Dental Clinic", 1000]} wrapper="span" className="text-[#20B2AA]" cursor={true} />
                             </h1>
                             <p className="text-white/80 text-sm sm:text-base max-w-xl">
-                                Best Dental Services in Siwan, Bihar — Trusted by 5000+ Patients Since 2014
+                                Best Dental Services in Siwan, Bihar — Trusted by 5000+ Patients Since 2013
                             </p>
                         </div>
                     </div>

@@ -368,7 +368,7 @@ export default function Home() {
           {/* Stats Row */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[1000px] mx-auto w-full pt-8 border-t border-gray-100">
             <div className="flex flex-col items-center text-center gap-1">
-              <span className="text-4xl font-black text-[#0056B3]"><AnimatedCounter end={10} suffix="+" /></span>
+              <span className="text-4xl font-black text-[#0056B3]"><AnimatedCounter end={13} suffix="+" /></span>
               <span className="text-gray-500 text-sm font-medium">Years Serving Siwan</span>
             </div>
             <div className="flex flex-col items-center text-center gap-1">
