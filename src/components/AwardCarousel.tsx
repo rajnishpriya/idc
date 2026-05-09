@@ -2,7 +2,8 @@
 
 import React, { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+
 
 interface CarouselItem {
     id: number;
@@ -17,14 +18,16 @@ interface ReusableCarouselProps {
     description: string;
     items: CarouselItem[];
     hideCardContent?: boolean;
+    hideHeader?: boolean;
     imageContainerClassName?: string;
     imageClassName?: string;
 }
 
-function ReusableCarousel({ tag, title, description, items, hideCardContent, imageContainerClassName = "w-full aspect-[3/4] lg:aspect-[4/5] relative overflow-hidden bg-gray-50 group", imageClassName = "absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" }: ReusableCarouselProps) {
+function ReusableCarousel({ tag, title, description, items, hideCardContent, hideHeader, imageContainerClassName = "w-full aspect-square relative overflow-hidden bg-white group", imageClassName = "absolute inset-4 bg-contain bg-no-repeat bg-center transition-transform duration-700 group-hover:scale-105" }: ReusableCarouselProps) {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "center", slidesToScroll: 1 });
     const [canScrollPrev, setCanScrollPrev] = useState(false);
     const [canScrollNext, setCanScrollNext] = useState(false);
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     const scrollPrev = useCallback(() => {
         if (emblaApi) emblaApi.scrollPrev();
@@ -49,14 +52,16 @@ function ReusableCarousel({ tag, title, description, items, hideCardContent, ima
 
     return (
         <div className="relative w-full max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="flex flex-col items-center text-center mb-16">
-                <span className="text-[#0056B3] font-bold tracking-widest uppercase text-sm mb-3">{tag}</span>
-                <h2 className="text-[#333333] text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">{title}</h2>
-                <div className="h-1 w-24 bg-[#20B2AA] mt-6 rounded-full"></div>
-                <p className="mt-6 text-gray-600 text-lg max-w-2xl">
-                    {description}
-                </p>
-            </div>
+            {!hideHeader && (
+                <div className="flex flex-col items-center text-center mb-16">
+                    <span className="text-[#0056B3] font-bold tracking-widest uppercase text-sm mb-3">{tag}</span>
+                    <h2 className="text-[#333333] text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">{title}</h2>
+                    <div className="h-1 w-24 bg-[#20B2AA] mt-6 rounded-full"></div>
+                    <p className="mt-6 text-gray-600 text-lg max-w-2xl">
+                        {description}
+                    </p>
+                </div>
+            )}
 
             <div className="overflow-hidden rounded-3xl" ref={emblaRef}>
                 <div className="flex touch-pan-y pt-4 pb-12 px-4 -m-4">
@@ -64,7 +69,7 @@ function ReusableCarousel({ tag, title, description, items, hideCardContent, ima
                         <div key={item.id} className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0 pr-4 md:pr-6">
                             <div className="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden flex flex-col hover:-translate-y-2 transition-transform duration-300 h-full">
                                 {/* Image Container */}
-                                <div className={imageContainerClassName}>
+                                <div className={`${imageContainerClassName} cursor-pointer cursor-zoom-in`} onClick={() => setSelectedImage(item.image)}>
                                     <div
                                         className={imageClassName}
                                         style={{ backgroundImage: `url('${item.image}')` }}
@@ -102,6 +107,28 @@ function ReusableCarousel({ tag, title, description, items, hideCardContent, ima
                     <ChevronRight size={24} />
                 </button>
             </div>
+
+            {/* Full Image Modal */}
+            {selectedImage && (
+                <div 
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 md:p-8"
+                    onClick={() => setSelectedImage(null)}
+                >
+                    <button 
+                        className="absolute top-4 right-4 md:top-8 md:right-8 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors"
+                        onClick={(e) => { e.stopPropagation(); setSelectedImage(null); }}
+                        aria-label="Close modal"
+                    >
+                        <X size={28} />
+                    </button>
+                    <img 
+                        src={selectedImage} 
+                        alt="Full view" 
+                        className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                        onClick={(e) => e.stopPropagation()}
+                    />
+                </div>
+            )}
         </div>
     );
 }
@@ -155,6 +182,8 @@ export function CertificationCarousel() {
             title="Our Certifications"
             description="Our clinic is officially certified by leading industry safety and standard organizations, guaranteeing the highest quality care."
             items={certificationsData}
+            hideHeader={true}
+            hideCardContent={true}
             imageContainerClassName="w-full aspect-[4/3] lg:aspect-[3/2] relative overflow-hidden bg-white group"
             imageClassName="absolute inset-4 bg-contain bg-no-repeat bg-center transition-transform duration-700 group-hover:scale-105"
         />
@@ -169,6 +198,8 @@ export function AchievementCarousel() {
             description="We are proud to be recognized across the industry for our commitment to exceptional clinical standards, innovation, and patient care."
             items={achievementsData}
             hideCardContent={true}
+            imageContainerClassName="w-full aspect-[3/4] lg:aspect-[4/5] relative overflow-hidden bg-white group"
+            imageClassName="absolute inset-4 bg-contain bg-no-repeat bg-center transition-transform duration-700 group-hover:scale-105"
         />
     );
 }
